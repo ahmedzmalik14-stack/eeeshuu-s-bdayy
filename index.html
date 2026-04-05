@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eeesh birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-mode="soft">
+  <div class="background-grid"></div>
+  <div class="aurora aurora-one"></div>
+  <div class="aurora aurora-two"></div>
+  <div class="particle-layer" id="heart-layer"></div>
+  <div class="cursor-sparkles" id="cursor-sparkles"></div>
+  <div class="chaos-layer" id="chaos-layer"></div>
+
+  <header class="topbar glass-card">
+    <div>
+      <p class="eyebrow">for eeesh</p>
+      <h1>somehow this became a whole website</h1>
+    </div>
+    <div class="topbar-controls">
+      <div class="mode-switcher" aria-label="Mood switcher">
+        <button class="mode-btn active" data-mode-target="soft">Soft Mode</button>
+        <button class="mode-btn" data-mode-target="party">Party Mode</button>
+        <button class="mode-btn" data-mode-target="chaos">Chaos Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel landing" id="landing">
+      <div class="landing-content glass-card">
+        <p class="eyebrow">deep breath first</p>
+        <h2 id="typed-text" aria-live="polite"></h2>
+        <p class="landing-sub" id="typed-subtext"></p>
+        <button class="primary-btn" id="start-btn">Start</button>
+      </div>
+    </section>
+
+    <section class="panel puzzle-section reveal-on-scroll" id="puzzle">
+      <div class="section-intro">
+        <p class="eyebrow">memory puzzle</p>
+        <h2>tiny chaos, very solvable</h2>
+        <p>Click tiles to swap them with the selected piece and rebuild the image.</p>
+      </div>
+      <div class="puzzle-wrap">
+        <div class="puzzle-board glass-card" id="puzzle-board" aria-label="Memory puzzle board"></div>
+        <div class="puzzle-side glass-card">
+          <div class="preview-frame">
+            <img id="puzzle-preview" alt="Puzzle preview" src="">
+          </div>
+          <p class="puzzle-status" id="puzzle-status">Put the picture back together and try not to bully the puzzle too much.</p>
+          <p class="puzzle-reveal hidden" id="puzzle-reveal">You’ve always been good at fixing things… including my mood.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel timeline-section reveal-on-scroll" id="timeline">
+      <div class="section-intro">
+        <p class="eyebrow">timeline</p>
+        <h2>the very odd sequence of events</h2>
+      </div>
+      <div class="timeline" id="timeline-list">
+        <article class="timeline-card glass-card"><span class="timeline-dot"></span><h3>Reddit, apparently</h3><p>Started with mild hater energy. Very efficient route to friendship, somehow.</p></article>
+        <article class="timeline-card glass-card"><span class="timeline-dot"></span><h3>Daily talking streak</h3><p>At some point it stopped being random and became a whole routine, with bonus chaos.</p></article>
+        <article class="timeline-card glass-card"><span class="timeline-dot"></span><h3>ACCA switch</h3><p>Normal people panic alone. We said let’s panic professionally and switch careers together.</p></article>
+        <article class="timeline-card glass-card"><span class="timeline-dot"></span><h3>Professional shoplifting allegations</h3><p>A joke that should have ended quickly. Instead it got promoted into lore.</p></article>
+        <article class="timeline-card glass-card"><span class="timeline-dot"></span><h3>LuckyOne chaos and fights</h3><p>Peak dramatic cinema. Slightly petty, weirdly funny, still survived.</p></article>
+        <article class="timeline-card glass-card"><span class="timeline-dot"></span><h3>HYD trip</h3><p>Proof that memories get louder when they’re inconveniently good.</p></article>
+        <article class="timeline-card glass-card"><span class="timeline-dot"></span><h3>Tetris obsession</h3><p>Music wasn’t enough, apparently. You needed digital blocks too, and then acted like that was perfectly normal.</p></article>
+        <article class="timeline-card glass-card"><span class="timeline-dot"></span><h3>Family-time support</h3><p>Under all the teasing and disappearing acts, you showed up when things were heavy. That part mattered.</p></article>
+      </div>
+    </section>
+
+    <section class="panel chat-section reveal-on-scroll" id="chat">
+      <div class="section-intro">
+        <p class="eyebrow">chat simulation</p>
+        <h2>evidence, basically</h2>
+      </div>
+      <div class="chat-shell glass-card">
+        <div class="chat-header">
+          <div class="chat-avatar">e</div>
+          <div>
+            <strong>eeesh</strong>
+            <p>last seen being dramatic 2 mins ago</p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+      </div>
+    </section>
+
+    <section class="panel unboxing-section reveal-on-scroll" id="unboxing">
+      <div class="section-intro">
+        <p class="eyebrow">apple watch propaganda</p>
+        <h2>proof that she was, in fact, fixated</h2>
+        <p>The unboxing moment. Very serious business.</p>
+      </div>
+      <div class="video-frame glass-card">
+        <video controls preload="metadata" poster="assets/unboxing-poster.png">
+          <source src="assets/apple-watch-unboxing.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section class="panel letters-section reveal-on-scroll" id="letters">
+      <div class="section-intro">
+        <p class="eyebrow">open when</p>
+        <h2>tiny envelopes for suspiciously specific moods</h2>
+      </div>
+      <div class="letters-grid" id="letters-grid"></div>
+      <div class="letter-modal hidden" id="letter-modal" role="dialog" aria-modal="true" aria-labelledby="letter-title">
+        <div class="letter-card glass-card">
+          <button class="close-letter" id="close-letter" aria-label="Close letter">×</button>
+          <p class="eyebrow" id="letter-tag">open when</p>
+          <h3 id="letter-title"></h3>
+          <p id="letter-body"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel wheels-section reveal-on-scroll" id="wheels">
+      <div class="section-intro">
+        <p class="eyebrow">spin the wheel</p>
+        <h2>legally binding, unfortunately</h2>
+      </div>
+      <div class="wheels-layout">
+        <div class="wheel-card glass-card">
+          <h3>What you owe me</h3>
+          <div class="wheel-wrap"><div class="wheel-pointer"></div><div class="wheel" id="wheel-you-owe"></div></div>
+          <button class="primary-btn spin-btn" data-wheel="youOwe">Spin</button>
+        </div>
+        <div class="wheel-card glass-card">
+          <h3>What I owe you</h3>
+          <div class="wheel-wrap"><div class="wheel-pointer"></div><div class="wheel" id="wheel-i-owe"></div></div>
+          <button class="primary-btn spin-btn" data-wheel="iOwe">Spin</button>
+        </div>
+      </div>
+      <div class="wheel-result glass-card hidden" id="wheel-result"></div>
+    </section>
+
+    <section class="panel video-section reveal-on-scroll" id="video">
+      <div class="section-intro">
+        <p class="eyebrow">final reel</p>
+        <h2 class="video-intro-lines">
+          <span>You’re annoying.</span><span>You’re dramatic.</span><span>You say NOOOO too much.</span><span>But somehow… you’re the person that matters the most.</span>
+        </h2>
+      </div>
+      <div class="video-frame glass-card">
+        <video controls preload="metadata" poster="assets/final-poster.png">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-note">The final video file is currently too large for a standard Vercel Hobby static deploy. Compress it under 100 MB, then add it back as <code>assets/final-video.mp4</code>.</p>
+      </div>
+    </section>
+
+    <section class="panel ending-section reveal-on-scroll" id="ending">
+      <div class="ending-card glass-card">
+        <p class="eyebrow">end scene</p>
+        <h2>Maybe that’s enough for one birthday.</h2>
+        <p>Some things don’t need a dramatic final line. This can just stay here.</p>
+      </div>
+    </section>
+  </main>
+
+  <template id="letter-template">
+    <button class="letter-envelope glass-card">
+      <span class="envelope-flap"></span>
+      <span class="envelope-title"></span>
+    </button>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
