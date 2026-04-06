@@ -1,25 +1,27 @@
 const typedLines = ["Hey eeesh... don't say NOOOO yet.", "Just click once."];
 const chatScript = [
+  { side: "received", text: "nokar??" },
+  { side: "sent", text: "bhool gaya tha, washing em rn" },
   { side: "received", text: "i want an apple watch please" },
-  { side: "sent", text: "nope" },
+  { side: "sent", text: "next time" },
   { side: "sent", text: "what do u think i've got u for your birthday?" },
   { side: "received", text: "apple watch" },
   { side: "sent", text: "why are you so fixated" },
-  { side: "received", text: "she laughs" },
-  { side: "sent", text: "you say NOOOO like it's a personality trait" },
-  { side: "received", text: "it is and i stand by it" },
+  { side: "received", text: "hehe i love it" },
   { side: "sent", text: "you order matcha every time and regret it every time" },
   { side: "received", text: "remind me not to order matcha again" },
   { side: "sent", text: "you get angry, disappear, sleep, and i'm still saying PLEASE" },
   { side: "received", text: "as you should" },
-  { side: "received", text: "nokar" },
-  { side: "sent", text: "bus ja rau dhonay" },
   { side: "sent", text: "professional shoplifter behavior, honestly" },
   { side: "received", text: "false allegations. rude." },
+  { side: "sent", text: "let's go to this concert, we'll tell maa mw is hosting a rooftop concert 💀" },
+  { side: "received", text: "BAHAHAHAHAH.... no!" },
+  { side: "sent", text: "you say NOOOO like it's a personality trait" },
+  { side: "received", text: "NOO!!" },
   { side: "sent", text: "but also... you show up" },
   { side: "sent", text: "when it actually matters" },
   { side: "received", text: "..." },
-  { side: "sent", text: "happy birthday eeeshu" }
+  { side: "sent", text: "happy birthday eeeshu 💗🫂" }
 ];
 
 const letters = [
