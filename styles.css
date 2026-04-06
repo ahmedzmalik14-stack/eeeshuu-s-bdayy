@@ -42,13 +42,6 @@ body::before {
   mix-blend-mode: screen;
 }
 
-body[data-mode="party"] {
-  --maroon: #b91c4f;
-  --maroon-soft: #ff7098;
-  --navy: #183e77;
-  --navy-soft: #6da1ff;
-}
-
 body[data-mode="chaos"] { animation: body-shift 3s infinite alternate ease-in-out; }
 @keyframes body-shift { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(-10deg); } }
 
@@ -71,13 +64,13 @@ body[data-mode="chaos"] { animation: body-shift 3s infinite alternate ease-in-ou
 .aurora-one {
   background: radial-gradient(circle, rgba(107, 16, 40, 0.55), transparent 55%);
   width: 45vw; height: 45vw; top: -8vw; left: -5vw;
-  animation: float-aurora 10s infinite alternate ease-in-out;
+  animation: float-aurora 8s infinite alternate ease-in-out;
 }
 
 .aurora-two {
   background: radial-gradient(circle, rgba(16, 35, 62, 0.65), transparent 60%);
   width: 42vw; height: 42vw; right: -8vw; top: 20vh;
-  animation: float-aurora 13s infinite alternate-reverse ease-in-out;
+  animation: float-aurora 10s infinite alternate-reverse ease-in-out;
 }
 
 @keyframes float-aurora {
@@ -230,9 +223,9 @@ main { position: relative; z-index: 1; }
   margin-left: 3rem;
   padding: 1.3rem 1.4rem;
   border-radius: var(--radius-lg);
-  transform: translateY(20px);
+  transform: translateY(34px) scale(0.985);
   opacity: 0;
-  transition: opacity 500ms ease, transform 500ms ease;
+  transition: opacity 650ms ease, transform 650ms ease;
 }
 
 .timeline-card.visible, .reveal-on-scroll.visible { opacity: 1; transform: translateY(0); }
@@ -262,9 +255,9 @@ main { position: relative; z-index: 1; }
   padding: 0.9rem 1rem;
   border-radius: 20px;
   line-height: 1.55;
-  transform: translateY(18px);
+  transform: translateY(26px) scale(0.98);
   opacity: 0;
-  animation: message-in 380ms forwards ease;
+  animation: message-in 520ms forwards ease;
 }
 
 .message.sent { align-self: flex-end; background: linear-gradient(135deg, rgba(107, 16, 40, 0.75), rgba(69, 18, 44, 0.85)); border-bottom-right-radius: 6px; }
@@ -338,7 +331,7 @@ main { position: relative; z-index: 1; }
 .heart, .sparkle, .chaos-word, .confetti { position: absolute; pointer-events: none; }
 
 .heart {
-  font-size: 0.9rem; color: rgba(255, 183, 205, 0.9); animation: float-heart 6s linear forwards;
+  font-size: 1.05rem; color: rgba(255, 183, 205, 0.9); animation: float-heart 7s linear forwards;
   text-shadow: 0 0 18px rgba(255, 184, 204, 0.4);
 }
 
@@ -361,18 +354,14 @@ main { position: relative; z-index: 1; }
 
 .chaos-word {
   color: rgba(255, 255, 255, 0.18); font-weight: 700; font-size: clamp(1rem, 2.5vw, 2rem);
-  animation: chaos-drift 6s linear infinite;
+  animation: chaos-drift 4.5s linear infinite;
 }
 
 @keyframes chaos-drift { from { transform: translate3d(0, 0, 0) rotate(-8deg); } to { transform: translate3d(20px, -32px, 0) rotate(9deg); } }
 .hidden { display: none !important; }
-.reveal-on-scroll { opacity: 0; transform: translateY(32px); transition: opacity 600ms ease, transform 600ms ease; }
-body[data-mode="party"] .glass-card { box-shadow: 0 24px 80px rgba(24, 33, 91, 0.25), 0 0 40px rgba(185, 28, 79, 0.2); }
-body[data-mode="party"] .primary-btn { animation: pulse-party 2.2s infinite ease-in-out; }
-@keyframes pulse-party { 0%, 100% { box-shadow: 0 0 0 rgba(255, 112, 152, 0.2); } 50% { box-shadow: 0 0 28px rgba(255, 112, 152, 0.35); } }
-
+.reveal-on-scroll { opacity: 0; transform: translateY(44px) scale(0.985); transition: opacity 700ms ease, transform 700ms ease; }
 body[data-mode="chaos"] .glass-card, body[data-mode="chaos"] .letter-envelope, body[data-mode="chaos"] .wheel-card {
-  animation: chaos-wobble 4s infinite ease-in-out;
+  animation: chaos-wobble 2.6s infinite ease-in-out;
 }
 
 @keyframes chaos-wobble {

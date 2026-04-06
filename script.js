@@ -184,7 +184,7 @@ async function runChat() {
     bubble.textContent = entry.text;
     chatMessages.appendChild(bubble);
     chatMessages.scrollTop = chatMessages.scrollHeight;
-    await wait(document.body.dataset.mode === "party" ? 500 : 950);
+    await wait(950);
   }
 }
 
@@ -239,11 +239,7 @@ function spinWheel(key) {
 function setMode(mode) {
   document.body.dataset.mode = mode;
   modeButtons.forEach((btn) => btn.classList.toggle("active", btn.dataset.modeTarget === mode));
-  if (mode === "party") {
-    burstConfetti(window.innerWidth / 2, 120, 28);
-    clearInterval(chaosInterval);
-    chaosLayer.innerHTML = "";
-  } else if (mode === "chaos") {
+  if (mode === "chaos") {
     launchChaos();
   } else {
     clearInterval(chaosInterval);
